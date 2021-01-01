@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.coursera.distributed.SparkTest" time="754.49" tests="6" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.6+10-LTS"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home/lib"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/mmann/Desktop/Distributed-Programming-in-Java/miniproject_1"/>
+    <property name="java.vm.vendor" value="Azul Systems, Inc."/>
+    <property name="java.vendor.url" value="http://www.azulsystems.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/mmann/Desktop/Distributed-Programming-in-Java/miniproject_1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.6+10-LTS"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/nt/rmyxt1c52xn2dpvrv51qtbdm0000gp/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/mmann/Desktop/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf11197781034123358388.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/mmann/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.14.6"/>
+    <property name="user.home" value="/Users/mmann"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="mmann"/>
+    <property name="java.class.path" value="/Users/mmann/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_1.16.0.20200610-1735/jars/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.6"/>
+    <property name="java.vendor" value="Azul Systems, Inc."/>
+    <property name="maven.home" value="/Users/mmann/Desktop/Distributed-Programming-in-Java/miniproject_1/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2020-01-14"/>
+    <property name="java.vendor.url.bug" value="http://www.azulsystems.com/support/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Zulu11.37+17-CA"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testIncreasingTwentyThousand" classname="edu.coursera.distributed.SparkTest" time="68.006">
+    <failure message="Expected at least 1.35x speedup, but only saw 0.9697896628930024x. Sequential time = 30753 ms, parallel time = 31711 ms" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected at least 1.35x speedup, but only saw 0.9697896628930024x. Sequential time = 30753 ms, parallel time = 31711 ms
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:229)
+	at edu.coursera.distributed.SparkTest.testIncreasingTwentyThousand(SparkTest.java:261)
+</failure>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 20000 websites
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/12/30 18:21:08 INFO PlatformDependent: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+20/12/30 18:21:09 INFO Remoting: Starting remoting
+20/12/30 18:21:10 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.1.1:58959]
+
+Single-core execution ran in 30753 ms
+4-core execution ran in 31711 ms, yielding a speedup of 0.9697896628930024x
+
+]]></system-err>
+  </testcase>
+  <testcase name="testIncreasingFiftyThousand" classname="edu.coursera.distributed.SparkTest" time="160.569"/>
+  <testcase name="testRandomTwentyThousand" classname="edu.coursera.distributed.SparkTest" time="66.503">
+    <failure message="Expected at least 1.35x speedup, but only saw 1.2767304299699056x. Sequential time = 36909 ms, parallel time = 28909 ms" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected at least 1.35x speedup, but only saw 1.2767304299699056x. Sequential time = 36909 ms, parallel time = 28909 ms
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:229)
+	at edu.coursera.distributed.SparkTest.testRandomTwentyThousand(SparkTest.java:283)
+</failure>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 20000 websites
+
+
+Single-core execution ran in 36909 ms
+4-core execution ran in 28909 ms, yielding a speedup of 1.2767304299699056x
+
+]]></system-err>
+  </testcase>
+  <testcase name="testRandomFiftyThousand" classname="edu.coursera.distributed.SparkTest" time="187.874"/>
+  <testcase name="testUniformTwentyThousand" classname="edu.coursera.distributed.SparkTest" time="83.959">
+    <failure message="Expected at least 1.35x speedup, but only saw 0.8753349093774626x. Sequential time = 38878 ms, parallel time = 44415 ms" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected at least 1.35x speedup, but only saw 0.8753349093774626x. Sequential time = 38878 ms, parallel time = 44415 ms
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at edu.coursera.distributed.SparkTest.testDriver(SparkTest.java:229)
+	at edu.coursera.distributed.SparkTest.testUniformTwentyThousand(SparkTest.java:239)
+</failure>
+    <system-err><![CDATA[Running the PageRank algorithm for 5 iterations on a website graph of 20000 websites
+
+
+Single-core execution ran in 38878 ms
+4-core execution ran in 44415 ms, yielding a speedup of 0.8753349093774626x
+
+]]></system-err>
+  </testcase>
+  <testcase name="testUniformFiftyThousand" classname="edu.coursera.distributed.SparkTest" time="187.579"/>
+</testsuite>
